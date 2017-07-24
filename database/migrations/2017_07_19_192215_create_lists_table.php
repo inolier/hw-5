@@ -14,7 +14,7 @@ class CreateListsTable extends Migration
     public function up()
     {
 
-        Schema::create('lists', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->increments('id');
             $table->string('login');
             $table->string('password');
@@ -36,6 +36,6 @@ class CreateListsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lists');
+        Schema::dropIfExists('clients');
     }
 }

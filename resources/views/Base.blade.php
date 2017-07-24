@@ -5,7 +5,7 @@
 <body>
  <p>base</p>
  <div class="container">
-    @yield('con')
+    @yield('content')
  </div>
 </body>
 </html>

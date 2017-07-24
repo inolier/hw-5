@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use App\Models\List_List;
+use App\Models\Client;
 
-class ListController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,9 @@ class ListController extends Controller
      */
     public function index()
     {
-        $posts = List_List::all();
-        return view('List', ['lists' => $posts]);
+        $clients = Client::all();
+        return view('client', ['clients' => $clients]);
+
     }
     /**
      * Show the form for creating a new resource.
@@ -34,18 +35,20 @@ class ListController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( Request $request)
     {
-        List_List::create([
-            'login' => ($request->input('login')),
-            'password' => ($request->input('password')),
-            'email' => ($request->input('email')),
-            'name' => ($request->input('name')),
-            'surname' => ($request->input('surname')),
-            'gen' => ($request->input('gen')),
-            'phone' => ($request->input('phone')),
-        ]);
-       return redirect()->route('/');
+        dd($request->all());
+        //$client=Client $client,
+//        Client::create([
+//            'login' => ($request->input('login')),
+//            'password' => ($request->input('password')),
+//            'email' => ($request->input('email')),
+//            'name' => ($request->input('name')),
+//            'surname' => ($request->input('surname')),
+//            'gen' => ($request->input('gen')),
+//            'phone' => ($request->input('phone')),
+//        ]);
+       //return redirect()->route('/');
     }
 
     /**

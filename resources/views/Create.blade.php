@@ -1,6 +1,6 @@
 @extends('Base')
 
-@section('con')
+@section('content')
   <h1>Create</h1>
   {!! Form::open(['route' => 'store']) !!}
   @include('_form')

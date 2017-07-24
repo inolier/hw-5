@@ -10,11 +10,4 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-$router->resource('/','ListController');
-//Route::get('/', 'ListController@index');
-//Route::get('Registration', 'ListController@create');
-//get('/', ['as' => 'lists', 'uses' => 'ListController@index']);
-//
-/*Route::get('/', function () {
-    return view('List');
-});*/
+$router->resource('/','ClientController');

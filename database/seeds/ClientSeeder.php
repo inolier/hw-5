@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\List_List;
+use App\Models\Client;
 
-class ListSeeder extends Seeder
+class ClientSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,9 +14,9 @@ class ListSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('Lists')->delete();
-        List_List::create([
-            'login' => 'First Post',
+        DB::table('clients')->delete();
+        Client::create([
+            'login' => 'Second Post',
             'password' => 'first-post',
             'email' => 'First Post body',
             'name' => 'Content First Post body',
